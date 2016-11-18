@@ -198,10 +198,12 @@
             <version>2.0</version>
         </dependency>
         <!-- velocity end -->
+        <!-- 动态代理  spring aop 依赖 -->
         <dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.8.0</version>
 		</dependency>
+		<!-- 动态代理  spring aop 依赖 -->
 	</dependencies>
 </project>
