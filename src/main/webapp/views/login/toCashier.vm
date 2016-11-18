@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+	<script type="text/javascript" src="/static/js/jquery-2.0.2.min.js"></script>
+	<script>
+	   	 function pay(){
+		 	$('#cashierFrom').attr("target","_blank");
+         	$("#cashierFrom").submit();
+		 }	   	 
+    </script>
+</head>
+<body>
+     <form id="cashierFrom" method="post" action="http://sct.nxin.com/payment/initPaymentByWeb.action">
+		 <input type="hidden" name="userIdIn" value="$!{userIdIn}"/>      				
+		 <input type="hidden" name="ttype" value="$!{ttype}"/>							
+		 <input type="hidden" name="sellerName" value="$!{sellerName}"/>
+		 <input type="hidden" name="tsource" value="$!{tsource}"/>							
+		 <input type="hidden" name="isComm" value="$!{isComm}"/>							
+		 <input type="hidden" name="signmsg" value="$!{signmsg}"/>
+		 <input type="hidden" name="operator" value="$!{operator}"/>
+		 <input type="hidden" name="resulturl" value="$!{resulturl}"/>
+		 <input type="hidden" name="productNumber" value="$!{productNumber}"/>
+		 <input type="hidden" name="pptype" value="$!{pptype}"/>
+		 <input type="hidden" name="amount" value="$!{amount}"/>
+		 <input type="hidden" name="orderNo" value="$!{orderNo}"/>
+		 <input type="hidden" name="ppurp" value="$!{ppurp}"/>
+		 <input type="hidden" name="times" value="$!{times}"/>
+		 <input type="hidden" name="businessNo" value="$!{businessNo}"/>					
+		 <input type="hidden" name="sellerId" value="$!{sellerId}"/>					
+		 <input type="hidden" name="userId" value="$!{userId}"/>
+		 <input type="hidden" name="payType" value="$!{payType}"/>
+		 <input type="hidden" name="productName" value="$!{productName}"/>
+		 <input type="hidden" name="shareData" value='$!{shareData}'/>
+     </form>
+	 <input type="button"  value="去支付" onclick="pay()" style="width: 85px; height: 60px;" />	
+</body>
+</html>
