@@ -8,6 +8,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,6 +25,9 @@ import com.duan.sysmodule.util.MD5;
 @Controller
 @RequestMapping(value = "/payment")
 public class CashierController {
+	
+	private static Logger log = LogManager.getLogger(CashierController.class.getSimpleName());
+	
 	@RequestMapping(value = "/toCashier")
 	public String login(ModelMap map) {
 		String times = DateUtils.formatDate(new Date(), Constants.DATE_TIME_FORMAT_OTHER);
